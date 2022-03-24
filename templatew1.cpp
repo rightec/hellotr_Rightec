@@ -44,7 +44,6 @@ void TemplateW1::initStringList()
 void TemplateW1::onStateChanged()
 {
     initStringList();
-    // ui->retranslateUi(this);
 
     switch (m_State) {
     case 0:
@@ -69,13 +68,12 @@ void TemplateW1::onStateChanged()
 
     ui->m_btn_3State->setText(m_StateString);
     qDebug() << "TemplateW1::onStateChanged() text is: " << ui->m_btn_3State->text();
-    // ui->retranslateUi(this);
 
 }
 
 void TemplateW1::onShow()
 {
-    ui->retranslateUi(this);
+    onStateChanged();
     qDebug() << "TemplateW1::onShow() text is: " << ui->m_btn_3State->text();
     show();
 }
